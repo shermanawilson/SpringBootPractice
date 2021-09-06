@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <title>Footer</title>
+    <style>
+        footer{
+
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<footer th:fragment="footer" class="page-footer font-small special-color-dark pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-column">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <span class="footer-title">Product</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Plans & Prices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Frequently asked questions</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-column">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <span class="footer-title">Company</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Job postings</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 footer-column">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <span class="footer-title">Contact & Support</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-star"></i>Give feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center"><i class="fas fa-ellipsis-h"></i></div>
+
+        <div class="row text-center">
+            <div class="col-md-4 box">
+        <span class="copyright quick-links">Copyright &copy; Wilson Hall Designs <script>document.write(new Date().getFullYear())</script>
+        </span>
+            </div>
+            <div class="col-md-4 box">
+                <ul class="list-inline social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 box">
+                <ul class="list-inline quick-links">
+                    <li class="list-inline-item">
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">Terms of Use</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</footer>
+<!-- Footer -->
+</body>
+</html>

@@ -6,9 +6,12 @@
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 </head>
 <body>
+<nav th:include="navbar"/>
 <div class="container-fluid text-center">
-    <div class="h1">Welcome To My Application</div>
+    <div class="h1">Welcome To My Application!</div>
     <a class="h4" href="/users">Manage Users</a>
 </div>
+
+<footer th:include="stickyFooter"/>
 </body>
 </html>
