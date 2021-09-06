@@ -5,9 +5,14 @@
     <title>Welcome To My Application</title>
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 </head>
+<style>
+    .container-fluid {
+        background-image: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    }
+</style>
 <body>
 <nav th:include="navbar"/>
-<div class="container-fluid text-center">
+<div class="container-fluid text-center" id="bgImg">
     <div class="h1">Welcome To My Application!</div>
     <a class="h4" href="/users">Manage Users</a>
 </div>
