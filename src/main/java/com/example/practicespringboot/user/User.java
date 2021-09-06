@@ -23,7 +23,7 @@ public class User {
     @Column(length = 150, nullable = false, name= "last_name")
     private String lastName;
 
-
+    @Column(name = "enabled", nullable = false)
     private boolean enabled;
 
     //TODO:Empty Constructor
