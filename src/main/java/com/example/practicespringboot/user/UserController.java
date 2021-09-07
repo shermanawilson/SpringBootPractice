@@ -44,15 +44,24 @@ public class UserController {
     @GetMapping("/users/edit/{id}")
     public String showEditForm(@PathVariable("id") Integer id, Model model, RedirectAttributes ra) {
         try {
-           User user = service.get(id);
-           model.addAttribute("user", user);
+            User user = service.get(id);
+            model.addAttribute("user", user);
             model.addAttribute("pageTitle", "Edit User (ID: " + id + ")");
             return "user_form";
         } catch (UserNotFoundException e) {
-            ra.addFlashAttribute("message",e.getMessage());
+            ra.addFlashAttribute("message", e.getMessage());
             return "redirect:/users";
         }
     }
+
+    @PostMapping("/users/edit/{id}")
+    public String postEditForm(User user, RedirectAttributes ra) {
+        service.save(user);
+
+        ra.addFlashAttribute("message", "The user has been saved successfully");
+        return "redirect:/users";
+    }
+
 
     @GetMapping("/users/delete/{id}")
     public String deleteUser(@PathVariable("id") Integer id, RedirectAttributes ra) {
